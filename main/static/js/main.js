@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     logo.addEventListener('mouseenter', () => {
         logo.style.letterSpacing = '8px';
-        logo.style.transition = '0.4s';
+        logo.style.transition = '0.5s';
     });
 
     logo.addEventListener('mouseleave', () => {
