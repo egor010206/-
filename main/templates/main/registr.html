@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация — AUTOHIM</title>
+
+    <link rel="stylesheet" href="{% static 'css/registr.css' %}">
+    <link rel="stylesheet" href="{% static 'css/shrift.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+          <div class="logo"><a href="{%url 'index' %}">AUTOHIM</a></div>
+
+        <nav class="nav">
+            <a href="{%url 'catalog' %}">Каталог</a>
+            <a href="{%url 'vhod'%}">Вход</a>
+            <a href="{%url 'registr'%}">Регистрация</a>
+
+        </nav>
+    </div>
+</header>
+
+<main class="page">
+    <h1 class="page-title">Регистрация</h1>
+
+    <div class="card">
+        <form method="post" class="form">
+            {% csrf_token %}
+
+            <label>Логин</label>
+            <input type="text">
+
+            <label>Никнейм</label>
+            <input type="text">
+
+            <label>Имя</label>
+            <input type="text">
+
+            <label>Фамилия</label>
+            <input type="text">
+
+            <label>Отчество</label>
+            <input type="text">
+
+            <label>Электронная почта</label>
+            <input type="email">
+
+            <label>Номер телефона</label>
+            <input type="text">
+
+            <label>Пароль</label>
+            <input type="password">
+
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Я даю согласие на обработку персональных данных</label>
+                <label><input type="checkbox"> Я согласен(на) с правилами «Политики конфиденциальности»</label>
+            </div>
+
+            <div class="gender">
+                <span>Пол</span>
+                <label><input type="radio" name="gender"> мужской</label>
+                <label><input type="radio" name="gender"> женский</label>
+                <label><input type="radio" name="gender"> не выбран</label>
+            </div>
+
+            <button type="submit" class="btn-primary"><a href="{% url 'index' %}">Зарегистрироваться</button>
+
+            <p class="login-link">
+                Уже есть аккаунт? <a href="{%url 'vhod'%}">войти</a>
+            </p>
+        </form>
+    </div>
+</main>
+
+</body>
+</html>

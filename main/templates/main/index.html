@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTOHIM — Автохимия</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/shrift.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Saira:ital,wght@0,100..900;1,100..900&family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <div class="logo js-logo">
+            AUTOHIM
+        </div>
+
+        <nav class="nav">
+            <a href="{%url 'catalog' %}">Каталог</a>
+            <a href="{%url 'vhod'%}">Вход</a>
+            <a href="{%url 'registr'%}">Регистрация</a>
+
+            
+        </nav>
+    </div>
+</header>
+
+<main class="hero">
+    <div class="container hero-inner">
+        <div class="hero-image">
+        <img src="{% static 'images/products.png' %}">
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">AUTOHIM</h1>
+
+            <p class="hero-text">
+                Магазин автохимии предлагает широкий ассортимент товаров для ухода
+                за автомобилем и оборудования для автомоек.
+            </p>
+
+            <p class="hero-text">
+                В магазине можно найти автошампуни, полироли кузова, очистители,
+                протирочные материалы и другие моющие средства.
+            </p>
+
+            <p class="hero-text">
+                Также представлены мойки высокого давления, системы очистки воды
+                и воздушные компрессоры.
+            </p>
+
+            <a href="{%url 'catalog'%}" class="btn-catalog">
+                Каталог
+            </a>
+        </div>
+
+    </div>
+</main>
+
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

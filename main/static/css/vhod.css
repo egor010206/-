@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: #f3f3f3;
+    color: #0b1a2a;
+}
+.header {
+    background: #0b1a2a;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    letter-spacing: 4px;
+    color: #ffffff;
+}
+.logo a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.page {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.page-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+.card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 620px;
+    padding: 36px;
+    border-radius: 18px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form label {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.form input {
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid #cfcfcf;
+    padding: 0 14px;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    margin-top: 10px;
+    height: 44px;
+    border-radius: 15px;
+    border: none;
+    background: #142c46;
+    color: #ffffff;
+    font-size: 15px;
+    cursor: pointer;
+}
+.btn-primary a{
+text-decoration: none;
+  color: #ffffff;
+}
+.register-link {
+    margin-top: 18px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.register-link a {
+    color: #0b1a2a;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+@media (max-width: 376px) {
+    .nav{
+        gap: 4px;
+    }
+    .logo a{
+        font-size: 24px;
+
+    }
+
+    .page-title {
+        font-size: 22px;
+    }
+
+    .card {
+        padding: 24px;
+        border-radius: 14px;
+    }
+
+    .form input {
+        height: 34px;
+        font-size: 13px;
+    }
+
+    .btn-primary {
+        height: 38px;
+        font-size: 14px;
+    }
+    
+  
+}
+
+@media (max-width: 960px) {
+    .page {
+        padding: 50px 20px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .logo {
+        font-size: 42px;
+    }
+
+    .page-title {
+        font-size: 34px;
+    }
+
+    .card {
+        max-width: 520px;
+        padding: 48px;
+        border-radius: 26px;
+    }
+
+    .form label {
+        font-size: 15px;
+    }
+
+    .form input {
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        height: 56px;
+        font-size: 17px;
+    }
+}
+@media (min-width: 2560px) {
+    .logo {
+        font-size: 52px;
+    }
+
+    .page-title {
+        font-size: 44px;
+    }
+
+    .card {
+        max-width: 650px;
+        padding: 64px;
+        border-radius: 34px;
+    }
+
+    .form label {
+        font-size: 20px;
+    }
+
+    .form input {
+        height: 60px;
+        font-size: 20px;
+        border-radius: 30px;
+    }
+
+    .btn-primary {
+        height: 72px;
+        font-size: 22px;
+        border-radius: 36px;
+    }
+
+    .register-link {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход — AUTOHIM</title>
+
+    <link rel="stylesheet" href="{% static 'css/vhod.css' %}">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Cormorant+Garamond:wght@500;600;700&
+    family=IBM+Plex+Sans:wght@300;400;500;600&
+    display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+          <div class="logo"><a href="{%url 'index' %}">AUTOHIM</a></div>
+        <nav class="nav">
+            <a href="{%url 'catalog' %}">Каталог</a>
+            <a href="{%url 'vhod'%}">Вход</a>
+            <a href="{%url 'registr'%}">Регистрация</a>
+
+        </nav>
+    </div>
+</header>
+
+<main class="page">
+    <h1 class="page-title">Вход</h1>
+
+    <div class="card">
+        <form method="post" class="form">
+            {% csrf_token %}
+
+            <label>Логин</label>
+            <input type="text">
+
+            <label>Пароль</label>
+            <input type="password">
+
+            <button type="submit" class="btn-primary"><a href="{% url 'index' %}">Войти</a></button>
+
+            <p class="register-link">
+                ещё нет аккаунта?
+                <a href="{% url 'registr' %}">зарегистрироваться</a>
+            </p>
+        </form>
+    </div>
+</main>
+
+</body>
+</html>

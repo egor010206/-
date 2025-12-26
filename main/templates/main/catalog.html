@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог — AUTOHIM</title>
+    <link rel="stylesheet" href="{% static 'css/catalog.css' %}">
+     <link rel="stylesheet" href="{% static 'css/shrift.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="container header-inner">
+        <div class="logo"><a href="{%url 'index' %}">AUTOHIM</a></div>
+
+        <nav class="nav">
+            <a href="{%url 'catalog' %}">Каталог</a>
+            <a href="{%url 'vhod'%}">Вход</a>
+            <a href="{%url 'registr'%}">Регистрация</a>
+
+        </nav>
+    </div>
+</header>
+<main class="catalog-page">
+    <h1 class="catalog-title">Каталог</h1>
+
+    <div class="catalog-grid">
+        {% for product in products %}
+        <div class="product-card">
+            <div class="product-image">
+                <img src="{{ product.image.url }}" alt="{{ product.title }}">
+            </div>
+
+            <div class="product-info">
+                <h3>{{ product.title }}</h3>
+                <p>{{ product.description }}</p>
+
+                <div class="product-bottom">
+                    <span class="price">{{ product.price }} ₽</span>
+                    <button class="btn-buy">В корзину</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+
+</body>
+</html>
